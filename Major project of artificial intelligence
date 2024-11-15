@@ -1,0 +1,13 @@
+# Create a sentimentIntensityAnalyzer object 
+analyzer = sentimentIntensityAnalyzer()
+# Get user input 
+user_input = input("How are you feeling today? ")
+# Analyze the sentiment of the user's input 
+sentiment = analyzer.polarity_scores(user_input)
+# Determine the chatbot's response based on the sentiment scores
+it sentiment['compound'] >= 0.5:
+    print("That's great to hear!")
+elif sentiment ['compound'] <= -0.5:
+    print("I'm sorry to hear that")
+else:
+     print("Thanks for letting me know")
